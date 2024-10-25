@@ -1,0 +1,61 @@
+W=LOW;
+  } else if((!E && !F)){
+     digitalWrite(16, LOW);
+     W=LOW;
+  } else if(E && F){
+    W=HIGH;
+    digitalWrite(16, LOW);
+  }
+
+   int OP = (W || A || B || C || D); 
+   digitalWrite(11, OP);
+  }else {
+   digitalWrite(11, LOW);
+ }
+ //////////////////////////////////////////////////////NOT |1|1|1|
+ if (X && Y && Z) { 
+   int A = digitalRead(2);
+   int B = digitalRead(3);
+   int C = digitalRead(4);
+   int D = digitalRead(5);
+   int E = digitalRead(14);
+   int F = digitalRead(15);
+   int W = LOW; 
+
+
+  if ((E && !F) || (!E && F)) { 
+    digitalWrite(16, LOW); 
+    W=LOW;
+  } else if((!E && !F)){
+     digitalWrite(16, HIGH);
+     W=LOW;
+  } else if(E && F){
+    W=HIGH;
+    digitalWrite(16, HIGH);
+  }
+
+  
+
+  if (A == LOW) {
+    digitalWrite(10, HIGH);  
+  } else {
+    digitalWrite(10, LOW); 
+  }
+  if (B == LOW) {
+    digitalWrite(11, HIGH); 
+  } else {
+    digitalWrite(11, LOW); 
+  }
+  if (C == LOW) {
+    digitalWrite(12, HIGH); 
+  } else {
+    digitalWrite(12, LOW); 
+  }
+  if (D == LOW) {
+    digitalWrite(9, HIGH); 
+  } else {
+
+    digitalWrite(9, LOW); 
+  }
+}
+}
